@@ -1,0 +1,33 @@
+{
+    "name": "wiseadmin/wise-operation-log",
+    "description": "ThinkPHP6 操作日志扩展 - 基于PHP8 Attribute的声明式操作日志记录",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "WiseAdmin",
+            "email": "wiseadmin@126.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "topthink/framework": "^6.0 || ^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "wise\\operationlog\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "think": {
+            "services": [
+                "wise\\operationlog\\Service"
+            ],
+            "config": {
+                "wise-operation-log": "config/wise-operation-log.php"
+            },
+            "migrate-path": "database/migrations"
+        }
+    }
+}

@@ -1,0 +1,25 @@
+# 依赖目录
+/vendor/
+
+# 运行时缓存 / 日志
+/runtime/
+
+# 备份文件
+*~
+
+# IDE 配置
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 操作系统
+.DS_Store
+Thumbs.db
+
+# 测试缓存
+.phpunit.cache
+.phpunit.result.cache
+
+# Composer 锁文件
+/composer.lock

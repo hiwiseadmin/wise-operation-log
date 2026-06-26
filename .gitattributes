@@ -1,0 +1,11 @@
+* text=auto
+
+*.php diff=php
+
+# 导出时排除
+/.gitattributes      export-ignore
+/.gitignore          export-ignore
+/.github/            export-ignore
+/tests/              export-ignore
+/phpunit.xml         export-ignore
+/phpunit.xml.dist    export-ignore
