@@ -1,11 +1,12 @@
 {
     "name": "wiseadmin/wise-operation-log",
-    "description": "ThinkPHP6 操作日志扩展 - 基于PHP8 Attribute的声明式操作日志记录",
+    "description": "WiseAdmin 操作日志扩展包 — 基于 PHP 8 Attribute 的声明式操作日志记录，支持敏感数据脱敏、异常检测与自动归档",
+    "homepage": "https://github.com/hiwiseadmin/wise-operation-log",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "WiseAdmin",
+            "name": "WiseAdmin Team",
             "email": "wiseadmin@126.com"
         }
     ],
@@ -29,5 +30,18 @@
             },
             "migrate-path": "database/migrations"
         }
+    },
+    "archive": {
+        "exclude": [
+            "/tests",
+            "/docs",
+            "/.github",
+            "/phpunit.xml",
+            "/.gitattributes",
+            "/.gitignore",
+            "/*.md",
+            "!/README.md",
+            "/qa/"
+        ]
     }
 }
