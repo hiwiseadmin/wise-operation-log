@@ -1,0 +1,12 @@
+{extend name="__WISE_VIEW__/base" /}
+
+{block name="title"}操作日志{/block}
+
+{block name="content"}
+<body>
+<div class="app-main container-fluid">
+    {include file="__WISE_VIEW__/index_header" icon="bi bi-activity" caption="操作日志" buttongroup="" /}
+    <div id="toolbar" class="toolbar"></div>
+    <table id="table"></table>
+</div>
+{/block}
