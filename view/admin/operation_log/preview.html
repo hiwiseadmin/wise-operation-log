@@ -1,0 +1,66 @@
+{extend name="__WISE_VIEW__/base" /}
+
+{block name="title"}操作日志预览{/block}
+
+{block name="content"}
+<body>
+<div class="container p-4">
+        <div class="row align-items-center">
+            <div class="col-3 p-2 text-end">ID</div>
+            <div class="col p-2">{$operationLog.id}</div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-3 p-2 text-end">频道</div>
+            <div class="col p-2">{$operationLog.channel|default='-'}</div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-3 p-2 text-end">级别</div>
+            <div class="col p-2">{$operationLog.level|default='-'}</div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-3 p-2 text-end">日志内容</div>
+            <div class="col p-2" style="word-break: break-word;">{$operationLog.content|default='-'}</div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-3 p-2 text-end">请求参数</div>
+            <pre class="col p-2" style="word-break: break-word; white-space: pre-wrap;">{$operationLog.params|default='-'}</pre>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-3 p-2 text-end">操作耗时</div>
+            <div class="col p-2">{$operationLog.duration_ms|default='-'} ms</div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-3 p-2 text-end">操作者ID</div>
+            <div class="col p-2">{$operationLog.operator_id|default='-'}</div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-3 p-2 text-end">操作者</div>
+            <div class="col p-2">{$operationLog.operator_name|default='-'}</div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-3 p-2 text-end">请求URL</div>
+            <div class="col p-2" style="word-break: break-word;">{$operationLog.request_url|default='-'}</div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-3 p-2 text-end">请求IP</div>
+            <div class="col p-2">{$operationLog.ip|default='-'}</div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-3 p-2 text-end">用户代理</div>
+            <div class="col p-2" style="word-break: break-word;">{$operationLog.user_agent|default='-'}</div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-3 p-2 text-end">标签</div>
+            <div class="col p-2">{$operationLog.tags|default='-'}</div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-3 p-2 text-end">扩展数据</div>
+            <pre class="col p-2" style="word-break: break-word; white-space: pre-wrap;">{$operationLog.extra|default='-'}</pre>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-3 p-2 text-end">操作时间</div>
+            <div class="col p-2">{$operationLog.create_time}</div>
+        </div>
+    </div>
+</div>
+{/block}
